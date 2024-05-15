@@ -11,6 +11,7 @@ const UserSchema = new mongoose.Schema({
   ontheway: { type: Boolean},
   delivered: { type: Boolean},
   quantity: { type: Number, required: true },
+  Products: { type:Object },
   size:{type:String, required:true}
 });
 
