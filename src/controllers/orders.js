@@ -5,8 +5,8 @@ import {UserModel} from "../db/orders.js"
 
 export const addtoorders = async (req, res) => {
     try {
-      const { productid, userid,date,orderid,quantity,size} = req.body;
-      if (!productid || !userid) {
+      const {userid,date,orderid,products} = req.body;
+      if (!userid) {
         return res.sendStatus(400);
       }
 
@@ -17,12 +17,10 @@ export const addtoorders = async (req, res) => {
     }
 
       const user  = await createorders({
-        productid,
+      products,
         userid,
         date,
         orderid,
-        quantity,
-        size
       });
       return res.status(200).json(user).end();
     } catch (error) {

@@ -2,7 +2,6 @@ import mongoose from 'mongoose';
 
 // User Config
 const UserSchema = new mongoose.Schema({
-  productid: { type: String, required: true },
   userid: { type: String, required: true },
   orderid: { type: String, required: true },
   date: { type: String, required: true },
@@ -10,9 +9,7 @@ const UserSchema = new mongoose.Schema({
   shipped: { type: Boolean},
   ontheway: { type: Boolean},
   delivered: { type: Boolean},
-  quantity: { type: Number, required: true },
   Products: { type:Object },
-  size:{type:String, required:true}
 });
 
  export const UserModel = mongoose.model('orders', UserSchema);
