@@ -1,6 +1,6 @@
 import express from 'express';
 
-import { createCartfororders ,getcartfororders,getcartforordersByuserid,deleteCartforordersById} from '../db/Cartfororders.js';
+import { createCartfororders ,getcartfororders,getcartforordersByuserid,deleteCartforordersById,detetecart} from '../db/Cartfororders.js';
 
 
 export const addtocartfororders = async (req, res) => {
@@ -74,6 +74,16 @@ details,
       const deletedUser = await deleteCartforordersById(id);
   
       return res.json(deletedUser);
+    } catch (error) {
+      console.log(error);
+      return res.sendStatus(400);
+    }
+  }
+
+  export  const deletecompletecart = async (req, res) => {
+    try {
+      const deletecart = await detetecart();
+      return res.status(200).json(deletecart);
     } catch (error) {
       console.log(error);
       return res.sendStatus(400);

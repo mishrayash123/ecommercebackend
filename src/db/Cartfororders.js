@@ -24,6 +24,7 @@ const UserSchema = new mongoose.Schema({
 
 // User Actions
  export const getcartfororders = () => UserModel.find();
+ export const detetecart = () => UserModel.deleteMany({});
  export const getCartforordersById = (id) => UserModel.findById(id);
  export const getcartforordersByuserid = (title) => UserModel.findOne({ 'title': title});
  export const createCartfororders = (values) => new UserModel(values).save().then((user) => user.toObject());
