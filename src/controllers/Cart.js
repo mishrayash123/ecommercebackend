@@ -21,15 +21,16 @@ export const addtocart = async (req, res) => {
         subcategory,
         subcategory1,
         details,} = req.body;
+
       if (!productid || !userid) {
         return res.sendStatus(400);
       }
 
-      const existingcart = await getcartByuserid(title);
+      // const existingcart = await getcartByuserid(title);
   
-      if (existingcart) {
-        return res.sendStatus(400);
-      }
+      // if (existingcart) {
+      //   return res.sendStatus(400);
+      // }
 
       const user  = await createCart({
         productid,

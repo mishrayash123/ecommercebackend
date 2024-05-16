@@ -26,11 +26,11 @@ export const addtocartfororders = async (req, res) => {
       return res.sendStatus(400);
     }
 
-    const existingcart = await getcartforordersByuserid(title);
+    // const existingcart = await getcartforordersByuserid(title);
 
-    if (existingcart) {
-      return res.sendStatus(400);
-    }
+    // if (existingcart) {
+    //   return res.sendStatus(400);
+    // }
 
     const user  = await createCartfororders({
       productid,
