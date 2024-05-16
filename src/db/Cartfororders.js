@@ -9,6 +9,7 @@ const UserSchema = new mongoose.Schema({
   size: { type: String, required: true },
   price: { type: Number, required: true },
   image1: { type: String, required: true },
+  quantity:{ type: Number, required: true },
   image2: { type: String, required: true },
   image3: { type: String, required: true },
   image4: { type: String, required: true },
