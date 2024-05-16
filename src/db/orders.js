@@ -9,7 +9,7 @@ const UserSchema = new mongoose.Schema({
   shipped: { type: Boolean},
   ontheway: { type: Boolean},
   delivered: { type: Boolean},
-  Products: { type:Object },
+  products: { type:Object },
 });
 
  export const UserModel = mongoose.model('orders', UserSchema);
