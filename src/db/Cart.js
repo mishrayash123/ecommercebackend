@@ -25,6 +25,6 @@ const UserSchema = new mongoose.Schema({
 // User Actions
  export const getcart = () => UserModel.find();
  export const getCartById = (id) => UserModel.findById(id);
- export const getcartByuserid = (title) => UserModel.findOne({ 'title': title});
+ export const getcartByuserid = (productid) => UserModel.findOne({ 'productid': productid});
  export const createCart = (values) => new UserModel(values).save().then((user) => user.toObject());
  export const deleteCartById = (id) => UserModel.findOneAndDelete({ _id: id });
