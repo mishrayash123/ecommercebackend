@@ -4,22 +4,6 @@ import { createCart ,getcart,getcartByuserid,deleteCartById} from '../db/Cart.js
 
 
 export const addtocart = async (req, res) => {
-  console.log(productid,
-    title,
-    color,
-    gender,
-    size,
-    price,
-    image1,
-    image2,
-    image3,
-    image4,
-    description,
-    userid,
-    category,
-    subcategory,
-    subcategory1,
-    details)
     try {
       const { productid,
         title,
@@ -37,6 +21,23 @@ export const addtocart = async (req, res) => {
         subcategory,
         subcategory1,
         details,} = req.body;
+
+        console.log(productid,
+          title,
+          color,
+          gender,
+          size,
+          price,
+          image1,
+          image2,
+          image3,
+          image4,
+          description,
+          userid,
+          category,
+          subcategory,
+          subcategory1,
+          details)
 
       if (!productid || !userid) {
         return res.sendStatus(400);
