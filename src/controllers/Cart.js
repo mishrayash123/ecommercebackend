@@ -22,30 +22,7 @@ export const addtocart = async (req, res) => {
         subcategory1,
         details,} = req.body;
 
-        console.log(productid,
-          title,
-          color,
-          gender,
-          size,
-          price,
-          image1,
-          image2,
-          image3,
-          image4,
-          description,
-          userid,
-          category,
-          subcategory,
-          subcategory1,
-          details)
-
       if (!productid || !userid) {
-        return res.sendStatus(400);
-      }
-
-      const existingcart = await getcartByuserid(productid);
-  
-      if (existingcart) {
         return res.sendStatus(400);
       }
 
